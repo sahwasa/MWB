@@ -1,15 +1,15 @@
-bc_err_log.html  : 방송오류일지
-bc_stt.html      : 방송상태
-branch_mng.html  : 지점관리
-day_bc_jrnl.html : 일별 방송일지
-login.html       : 로그인
-msg_rcv_stt.html : 전문수신현황
-prd_bc_agg.html  : 기간별방송집계
-schdl_mng.html   : 시간표관리
-scrpt_mng.html   : 원고관리
-sys_set.html     : 시스템설정
-tmpl_mng.html    : 탬플릿설정
-user_mng.html    : 사용자관리
-voc_motr.html    : 음성기상방송 메인
-voc_scrpt_mng.html  : 음성기상방송 원고관리
-wrls_fax_motr.html  : 무선팩스기상방송메인
+- bc_err_log.html  : 방송오류일지
+- bc_stt.html      : 방송상태
+- branch_mng.html  : 지점관리
+- day_bc_jrnl.html : 일별 방송일지
+- login.html       : 로그인
+- msg_rcv_stt.html : 전문수신현황
+- prd_bc_agg.html  : 기간별방송집계
+- schdl_mng.html   : 시간표관리
+- scrpt_mng.html   : 원고관리
+- sys_set.html     : 시스템설정
+- tmpl_mng.html    : 탬플릿설정
+- user_mng.html    : 사용자관리
+- voc_motr.html    : 음성기상방송 메인
+- voc_scrpt_mng.html  : 음성기상방송 원고관리
+- wrls_fax_motr.html  : 무선팩스기상방송메인
