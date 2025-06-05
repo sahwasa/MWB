@@ -1,0 +1,148 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>사용자관리<span>시스템관리</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <select name="" id="" title="검색유형"><option value="">전체</option></select>
+            <input type="text" title="검색어" placeholder="검색어를 입력하세요.">
+            <button type="button" class="btn_blue">검색</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_user_mng">
+          <table class="tbl_default tbl_hover">
+            <caption>사용자관리</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:100px;" span="3"/>
+              <col style="width:180px;" span="3"/>
+              <col style="width:100px;"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">코드</th>
+                <th scope="col">ID</th>
+                <th scope="col">이름</th>
+                <th scope="col">연락처</th>
+                <th scope="col">부서</th>
+                <th scope="col">직급</th>
+                <th scope="col">관리자 권한</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>1</td>              
+                <td>KITV0001</td>              
+                <td>홍길동</td>              
+                <td>010-1234-5678</td>              
+                <td>해양기상기후과</td>              
+                <td>주무관</td>              
+                <td>등록&sol;수정</td>              
+              </tr>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>1</td>              
+                <td>KITV0001</td>              
+                <td>홍길동</td>              
+                <td>010-1234-5678</td>              
+                <td>해양기상기후과</td>              
+                <td>주무관</td>              
+                <td>조회</td>              
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section_bot">
+        <div class="tool">
+          <button type="button" class="btn_blue_line" onclick="document.querySelector('#user_reg').showModal();">등록</button>
+          <button type="button" class="btn_blue_line">수정</button>
+          <button type="button" class="btn_gray_line">삭제</button>
+        </div>
+      </div>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+<dialog id="user_reg" class="pop">
+  <heade class="pop_header">
+    <h1>사용자관리 등록</h1>
+    <button type="button" class="btn_close" data-role="pop_close">닫기</button>
+  </heade>
+  <div class="pop_body">
+    <section class="tbl_row_wrap">
+      <table class="tbl_default full_ipt">
+        <caption>사용자관리</caption>
+        <tbody>          
+          <tr>
+            <th scope="row" class="required"><label for="">ID</label></th>
+            <td>
+              <div class="ipt_group">
+                <input type="text">
+                <button type="button" class="btn_confirm">중복확인</button>
+              </div>
+              <p class="invalid">중복이다 인마</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="required"><label for="">비밀번호</label></th>
+            <td>
+              <input type="password" placeholder="영문, 숫자, 특수문자 혼용  8자리 이상">
+              <div class="switch_pw"><label for="pwOpen1"><input type="checkbox" title="비밀번호 보기" id="pwOpen1" class="pw_Open">비밀번호 보기</label></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="required"><label for="">비밀번호 확인</label></th>
+            <td>
+              <input type="password" placeholder="비밀번호 확인">
+              <div class="switch_pw"><label for="pwOpen2"><input type="checkbox" title="비밀번호 보기" id="pwOpen2" class="pw_Open">비밀번호 보기</label></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="required"><label for="">이름</label></th>
+            <td>
+              <input type="text" placeholder="이름">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="required"><label for="">연락처</label></th>
+            <td>
+              <input type="text" placeholder="연락처">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">부서</label></th>
+            <td>
+              <input type="text" placeholder="부서">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">직급</label></th>
+            <td>
+              <input type="text" placeholder="직급">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="">관리자권한</label></th>
+            <td><select name="" id=""><option value="">조회</option></select></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="pop_foot">
+      <button type="button" class="btn_blue">저장</button>
+      <button type="button" class="btn_grayblue" data-role="pop_close">취소</button>
+    </div>
+  </div>
+</dialog>
+@@include('../inc/script.html')
+
+</body>
+</html>

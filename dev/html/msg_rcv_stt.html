@@ -1,0 +1,72 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>전문수신 현황<span>현황조회</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <em class="t_blue">2025-02-10</em> 전문수신 현황
+          <div class="tool">
+            <label for="">검색일자</label>
+            <input type="date" min="0001-01-01" max="9999-12-31">
+            <button type="button" class="btn_blue">검색</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_msg_rcv_stt">
+          <!-- //done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,unbc:미방송,bc_cncl:방송취소,delay:지연,normal:정상,gnrl_msg:일반전문,prrt_msg:우선전문 -->
+          <table class="tbl_default tbl_hover">
+            <caption>전문수신 현황</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:100px;"/>
+              <col style="width:200px;"/>
+              <col style="width:100px;"/>
+              <col />
+              <col style="width:460px;"/>
+              <col style="width:80px;"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">전문 수신시각</th>
+                <th scope="col">수신예상시각</th>
+                <th scope="col">원고유형</th>
+                <th scope="col">원고명</th>
+                <th scope="col">파일명</th>
+                <th scope="col">상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>02-10 00:10</td>
+                <td>23:30, 03:30, 06:30, 09:30</td>
+                <td>PS</td>
+                <td>전구해상풍파고예상도</td>
+                <td><i class="ext ext_ps">GWW3_GLOB_WAVE_FT06_FAX_PA4_S072_2025021000.PS</i></td>
+                <td><i class="stt delay">지연</i></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>02-10 00:10</td>
+                <td>23:30, 03:30, 06:30, 09:30</td>
+                <td>PNG</td>
+                <td>1일평균 해수면온도분포도</td>
+                <td><i class="ext ext_png">20250210_00120250210_00120250210_00120250210_00120250210_001.png</i></td>
+                <td><i class="stt normal">정상</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+@@include('../inc/script.html')
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>탬플릿관리<span>시스템관리</span></h1>        
+      </header>
+      <div class="flex_wrap tmpl_mng">
+        <section class="left_section">
+          <header class="tit">
+            <h2>탬플릿 요소</h2>
+          </header>
+          <div class="tbl_top">
+            <select name="" id="" title=""><option value="">등표기상실황</option></select>
+            <select name="" id="" title="언어"><option value="">한국어</option></select>
+            <button type="button" class="btn_blue">적용</button>
+          </div>
+          <div class="tbl_wrap">
+            <table class="tbl_default">              
+              <thead>
+                <tr>
+                  <th scope="col">순서</th>
+                  <th scope="col">필드명</th>
+                  <th scope="col">기호</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>발표시각</td>
+                  <td>$01</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="right_section flex_vertical_wrap">
+          <section class="tmpl">
+            <header class="tit">
+              <h2>탬플릿 문구</h2>
+            </header>
+            <div>
+              <ul class="btn_lst">
+                <li><button type="button">반복시작</button></li>
+                <li><button type="button">반복종료</button></li>
+                <li><button type="button">그룹시작</button></li>
+                <li><button type="button">그룹종료</button></li>
+                <li class="excptn"><button type="button">예외S</button></li>
+                <li><button type="button">예외E</button></li>
+              </ul>
+              <section>
+                <header class="tit">
+                  <h3>음성 탬플릿</h3>
+                </header>
+                <div class="box_default">
+                  <textarea title="음성 탬플릿" id="" name="" wrap="hard">기상청 발표 ＄01 현재, 등표기상 실황입니다.  ＄RS ＄03지점 풍향은 ＄04., 풍속은 ＄05m/s, 기온은 ＄09  입니다. ＄RE</textarea>
+                  <div class="tool">
+                    <button type="button" class="btn_preview">미리보기</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section class="tmpl_preview">
+            <header class="tit">
+              <h2>미리보기</h2>
+            </header>
+            <div class="box_grey">
+              <textarea title="미리보기" id="" name="" wrap="hard" readonly>기상청 발표 ＄01 현재, 등표기상 실황입니다.  ＄RS ＄03지점 풍향은 ＄04., 풍속은 ＄05m/s, 기온은 ＄09  입니다.            
+              </textarea>              
+            </div>
+          </section>
+        </div>
+      </div> 
+      <div class="section_bot line_t">
+        <div class="tool">
+          <button type="button" class="btn_blue">저장</button>
+        </div>
+      </div>     
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+@@include('../inc/script.html')
+
+</body>
+</html>

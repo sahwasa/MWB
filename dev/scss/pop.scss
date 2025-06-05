@@ -1,0 +1,23 @@
+@use "./var";
+@use "./reset";
+@use "./mixin";
+
+// font
+$maingap:20px;
+.window_pop{min-width:auto;overflow:hidden;}
+dialog,:modal {margin:auto;padding:35px;border:none;box-shadow: 1.4px 1.4px 29px 0 rgba(0, 0, 0, 0.08);font-size:13px;
+  &::backdrop{background:rgba(0, 0, 0, .5);}  
+}
+.pop_header{@include mixin.flex;border-bottom:2px solid var.$blue;margin-bottom:20px;padding-bottom:20px;
+  h1{color:var.$blue;font-size:20px;font-weight:700;line-height:1;}
+  .btn_close{position:absolute;right:15px;top:15px;border-radius:3px;padding:4px 5px 6px;
+    &:hover{background-color:var.$bgblue;}
+  }
+}
+.pop_body{max-height:calc(100vh - 240px);overflow-y:auto;font-size:13px;letter-spacing:-0.33px;
+  .tbl_row_wrap th{width:140px;padding:3px 10px 3px 20px;}
+}
+.pop_foot{@include mixin.flex($justify:flex-end);gap:4px;margin-top:20px;}
+.btn_close{cursor:pointer;font-size:0;line-height:19px;
+  &::before{content:"×";font-size:30px;color:#000;vertical-align:middle;}
+}

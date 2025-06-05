@@ -1,0 +1,118 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>원고관리<span>시스템관리</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <select name="" id="" title="검색유형"><option value="">전체</option></select>
+            <input type="text" title="검색어" placeholder="검색어를 입력하세요.">
+            <button type="button" class="btn_blue">검색</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_voc_scrpt_mng">          
+          <table class="tbl_default tbl_hover">
+            <caption>원고관리</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:100px;"/>
+              <col style="width:150px;"/>
+              <col />
+              <col style="width:100px;"/>
+              <col style="width:80px;" span="4"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">코드</th>
+                <th scope="col">우선순위</th>
+                <th scope="col">원고명</th>
+                <th scope="col">파일헤더</th>
+                <th scope="col">한국어</th>
+                <th scope="col">영어</th>
+                <th scope="col">일본어</th>
+                <th scope="col">중국어</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" title="줄선택"></td>
+                <td>1</td>
+                <td><i class="stt prrt_msg">우선전문</i></td>
+                <td>전구해상풍파고예상도</td>
+                <td>KTKO</td>
+                <td><input type="checkbox" title="한국어" checked></td>
+                <td><input type="checkbox" title="영어"></td>
+                <td><input type="checkbox" title="일본어"></td>
+                <td><input type="checkbox" title="중국어"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section_bot">
+        <div class="tool">
+          <button type="button" class="btn_blue_line" onclick="document.querySelector('#scrpt_reg').showModal();">등록</button>
+          <button type="button" class="btn_blue_line">수정</button>
+          <button type="button" class="btn_gray_line">삭제</button>
+        </div>
+      </div>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+<dialog id="scrpt_reg" class="pop">
+  <heade class="pop_header">
+    <h1>원고관리 등록</h1>
+    <button type="button" class="btn_close" data-role="pop_close">닫기</button>
+  </heade>
+  <div class="pop_body">
+    <section class="tbl_row_wrap">
+      <table class="tbl_default full_ipt">
+        <caption>원고관리</caption>
+        <tbody>
+          <tr>
+            <th scope="row"><label for="">원고코드</label></th>
+            <td><input type="text" size="38" readonly value="자동생성"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">원고명</label></th>
+            <td><input type="text" value="전구해상풍파고예상도"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">우선순위</label></th>
+            <td>
+              <select name="" id=""><option value="">일반전문</option></select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">파일헤더</label></th>
+            <td><input type="text" value="GWW3_GLOB_WAVE_FT06_FAX_PA4_S072"></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">방송언어</label></th>
+            <td>
+              <div class="check_group">
+                <label for=""><input type="checkbox">한국어</label>
+                <label for=""><input type="checkbox">영어</label>
+                <label for=""><input type="checkbox">일본어</label>
+                <label for=""><input type="checkbox">중국어</label>
+              </div>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+    </section>
+    <div class="pop_foot">
+      <button type="button" class="btn_blue">저장</button>
+      <button type="button" class="btn_grayblue" data-role="pop_close">취소</button>
+    </div>
+  </div>
+</dialog>
+@@include('../inc/script.html')
+</body>
+</html>

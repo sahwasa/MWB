@@ -1,0 +1,90 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>시스템설정<span>시스템관리</span></h1>        
+      </header>
+      <div class="flex_vertical_wrap">
+        <section>
+          <header class="tit">
+            <h2>디렉토리 설정</h2>
+          </header>
+          <div class="tbl_row_wrap">
+            <table class="tbl_default">
+              <tbody>
+                <tr>
+                  <th scope="row"><label for="">자료(전문)수신폴더</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">방송원고폴더</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">임시폴더</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">백업폴더</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <header class="tit">
+            <h2>시리얼통신 설정</h2>
+          </header>
+          <div class="tbl_row_wrap">
+            <table class="tbl_default">
+              <tbody>
+                <tr>
+                  <th scope="row"><label for="">#1 포트번호</label></th>
+                  <td><input type="text" class="full" /></td>
+                  <th scope="row"><label for="">#2 포트번호</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="">#1 통신설정</label></th>
+                  <td><input type="text" class="full" /></td>
+                  <th scope="row"><label for="">#2 통신설정</label></th>
+                  <td><input type="text" class="full" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section>
+          <header class="tit">
+            <h2>파일관리 설정</h2>
+          </header>
+          <div class="tbl_row_wrap">
+            <table class="tbl_default">
+              <tbody>
+                <tr>
+                  <th scope="row"><label for="">전문파일 유지기간</label></th>
+                  <td><input type="text" /></td>
+                  <th scope="row"><label for="">백업파일 유지기간</label></th>
+                  <td><input type="text" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>        
+      </div>
+      <div class="section_bot">
+        <div class="tool">
+          <button type="button" class="btn_blue_line">저장</button>
+        </div>
+      </div>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+@@include('../inc/script.html')
+
+</body>
+</html>

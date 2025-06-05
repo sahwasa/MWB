@@ -1,0 +1,83 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>기간별방송집계<span>보고서</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <label for="">검색일자</label>
+            <span class="ipt_range">
+              <input type="date" min="0001-01-01" max="9999-12-31">
+              <input type="date" min="0001-01-01" max="9999-12-31">
+            </span>
+            <button type="button" class="btn_blue">검색</button>
+            <button type="button" class="btn_blue_line">출력</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_prd_bc_agg">
+          <table class="tbl_default tbl_hover">
+            <caption>기간별방송집계</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:150px;"/>
+              <col />
+              <col style="width:100px;" span="8"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">방송시간표</th>
+                <th scope="col">방송내용</th>
+                <th scope="col">일수</th>
+                <th scope="col">원고생성성공</th>
+                <th scope="col">원고생성실패</th>
+                <th scope="col">소계</th>
+                <th scope="col">방송성공</th>
+                <th scope="col">방송실패</th>
+                <th scope="col">방송취소</th>
+                <th scope="col">소계</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>00:10</td>
+                <td>전구해상풍파고예상도</td>
+                <td>28</td>
+                <td>279</td>
+                <td>2</td>
+                <td>280</td>
+                <td>277</td>
+                <td>2</td>
+                <td>2</td>
+                <td>280</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="3">총계</th>
+                <td>28</td>
+                <td>279</td>
+                <td>2</td>
+                <td>280</td>
+                <td>277</td>
+                <td>2</td>
+                <td>2</td>
+                <td>280</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+@@include('../inc/script.html')
+
+</body>
+</html>

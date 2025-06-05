@@ -1,0 +1,105 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>일별방송일지<span>보고서</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <label for="">검색일자</label>
+            <span class="ipt_range">
+              <input type="date" min="0001-01-01" max="9999-12-31">
+              <input type="date" min="0001-01-01" max="9999-12-31">
+            </span>
+            <button type="button" class="btn_blue">검색</button>
+            <button type="button" class="btn_blue_line">출력</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_day_bc_jrnl">
+          <table class="tbl_default tbl_hover">
+            <caption>일별방송일지</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:100px;"/>
+              <col />
+              <col style="width:100px;" span="5"/>
+              <col style="width:150px;"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">방송시간표</th>
+                <th scope="col">방송내용</th>
+                <th scope="col">원고생성결과</th>
+                <th scope="col">방송일자</th>
+                <th scope="col">시작시각</th>
+                <th scope="col">종료시각</th>
+                <th scope="col">방송결과</th>
+                <th scope="col">오류내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>00:10</td>
+                <td>전구해상풍파고예상도</td>
+                <td>정상</td>
+                <td>2025-02-10</td>
+                <td>23:30</td>
+                <td>03:30</td>
+                <td>정상</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>00:10</td>
+                <td>전구해상풍파고예상도</td>
+                <td class="t_red">생성실패</td>
+                <td>2025-02-10</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="t_red">방송실패</td>
+                <td>전문미수신</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>00:10</td>
+                <td>전구해상풍파고예상도</td>
+                <td>정상</td>
+                <td>2025-02-10</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="t_yellow">방송취소</td>
+                <td>사용자 방송중지</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl_bot">
+          <dl class="tbl_count count_day_bc_jrnl">
+            <dt>방송건수</dt>
+            <dd><strong>20</strong>건</dd>
+            <dt>원고생성정상</dt>
+            <dd><strong>20</strong>건</dd>
+            <dt>원고생성실패</dt>
+            <dd><strong>20</strong>건</dd>
+            <dt>방송완료</dt>
+            <dd><strong>20</strong>건</dd>
+            <dt>방송실패</dt>
+            <dd><strong>20</strong>건</dd>
+            <dt>방송취소</dt>
+            <dd><strong>20</strong>건</dd>
+          </dl>
+        </div>
+      </section>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+@@include('../inc/script.html')
+
+</body>
+</html>

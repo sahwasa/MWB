@@ -1,0 +1,103 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>지점관리<span>시스템관리</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <select name="" id="" title="검색유형"><option value="">전체</option></select>
+            <input type="text" title="검색어" placeholder="검색어를 입력하세요.">
+            <button type="button" class="btn_blue">검색</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_branch_mng">
+          <table class="tbl_default tbl_hover">
+            <caption>지점관리</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:180px;" span="6"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">구분</th>
+                <th scope="col">지점코드</th>
+                <th scope="col">지점이름</th>
+                <th scope="col">위도</th>
+                <th scope="col">경도</th>
+                <th scope="col">사용여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>등대기상실황</td><td>300</td><td>대진</td>
+                <td>35.1234</td><td>123.4567</td>
+                <td><i class="stt used">사용함</i></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>등대기상실황</td><td>300</td><td>대진</td>
+                <td>35.1234</td><td>123.4567</td>
+                <td><i class="stt used">사용함</i></td>
+              </tr>                   
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section_bot">
+        <div class="tool">
+          <button type="button" class="btn_blue_line" onclick="document.querySelector('#branch_reg').showModal();">등록</button>
+          <button type="button" class="btn_blue_line">수정</button>
+          <button type="button" class="btn_gray_line">삭제</button>
+        </div>
+      </div>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+<dialog id="branch_reg" class="pop">
+  <heade class="pop_header">
+    <h1>지점관리 등록</h1>
+    <button type="button" class="btn_close" data-role="pop_close">닫기</button>
+  </heade>
+  <div class="pop_body">
+    <section class="tbl_row_wrap">
+      <table class="tbl_default">
+        <caption>지점관리</caption>
+        <tbody>          
+          <tr>
+            <th scope="row"><label for="">구분</label></th>
+            <td>
+              <select name="" id="" class="full"><option value="">전구해상풍파고예상도</option></select>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="">지점코드</label></th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th><label for="">지점명</label></th>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th><label for="">사용여부</label></th>
+            <td><input type="checkbox" checked></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="pop_foot">
+      <button type="button" class="btn_blue">저장</button>
+      <button type="button" class="btn_grayblue" data-role="pop_close">취소</button>
+    </div>
+  </div>
+</dialog>
+@@include('../inc/script.html')
+
+</body>
+</html>

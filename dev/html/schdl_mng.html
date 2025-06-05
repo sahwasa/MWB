@@ -1,0 +1,131 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="cont_body">
+      <header class="tit">
+        <h1>시간표관리<span>시스템관리</span></h1>        
+      </header>
+      <section>
+        <div class="tbl_top">
+          <div class="tool">
+            <select name="" id="" title="검색유형"><option value="">전체</option></select>
+            <input type="text" title="검색어" placeholder="검색어를 입력하세요.">
+            <button type="button" class="btn_blue">검색</button>
+          </div>
+        </div>
+        <div class="tbl_wrap tbl_schdl_mng">
+          <!-- //done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,unbc:미방송,bc_cncl:방송취소,delay:지연,normal:정상,gnrl_msg:일반전문,prrt_msg:우선전문 -->
+          <table class="tbl_default tbl_hover">
+            <caption>시간표관리</caption>
+            <colgroup>
+              <col style="width:50px;"/>
+              <col style="width:120px;" span="2"/>
+              <col style="width:180px;"/>
+              <col />
+              <col style="width:80px;"/>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">선택</th>
+                <th scope="col">원고준비시각</th>
+                <th scope="col">방송시각</th>
+                <th scope="col">전문수신 예상시각</th>
+                <th scope="col">원고명</th>
+                <th scope="col">사용여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>23:30</td><td>03:30</td><td>전일 14:30</td>
+                <td>전구해상풍파고예상도</td>
+                <td><i class="stt used">사용함</i></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" title="줄 선택" /></td>
+                <td>23:30</td><td>03:30</td><td>전일 14:30</td>
+                <td>전구해상풍파고예상도</td>
+                <td><i class="stt unused">사용안함</i></td>
+              </tr>             
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="section_bot">
+        <div class="tool">
+          <button type="button" class="btn_blue_line" onclick="document.querySelector('#schdl_reg').showModal();">등록</button>
+          <button type="button" class="btn_blue_line">수정</button>
+          <button type="button" class="btn_gray_line">삭제</button>
+        </div>
+      </div>
+    </div>  
+  </main>
+  @@include('../inc/footer.html')
+</div>
+<dialog id="schdl_reg" class="pop">
+  <heade class="pop_header">
+    <h1>시간표관리 등록</h1>
+    <button type="button" class="btn_close" data-role="pop_close">닫기</button>
+  </heade>
+  <div class="pop_body">
+    <section class="tbl_row_wrap">
+      <table class="tbl_default">
+        <caption>시간표관리</caption>
+        <tbody>          
+          <tr>
+            <th scope="row"><label for="">원고</label></th>
+            <td>
+              <select name="" id="" class="full"><option value="">전구해상풍파고예상도</option></select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">방송시각</th>
+            <td>
+              <div class="time_range">
+                <label for=""><input type="text"> 시</label>
+                <label for=""><input type="text"> 분</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">원고준비시각</th>
+            <td>
+              <div class="time_range">
+                <label for=""><input type="text"> 시</label>
+                <label for=""><input type="text"> 분</label>
+                <label for="">전일 <input type="checkbox"></label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">전문수신 예상시각</th>
+            <td>
+              <div class="time_range">
+                <label for=""><input type="text"> 시</label>
+                <label for=""><input type="text"> 분</label>
+                <label for="">전일 <input type="checkbox"></label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="">재방송 여부</label></th>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <th><label for="">사용여부</label></th>
+            <td><input type="checkbox" checked></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="pop_foot">
+      <button type="button" class="btn_blue">저장</button>
+      <button type="button" class="btn_grayblue" data-role="pop_close">취소</button>
+    </div>
+  </div>
+</dialog>
+@@include('../inc/script.html')
+
+</body>
+</html>
