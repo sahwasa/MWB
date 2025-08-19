@@ -82,11 +82,22 @@
 .ext{@include mixin.text_ellipsis();display:inline-block;font-weight:normal;color:var.$black;text-align:left;max-width:200px;vertical-align:middle;}
 
 // layout
-.wrap{display:flex;flex-direction:column;min-width:var.$mainwidth;height:100vh;font-size:13px;}
-.header{position:relative;flex-shrink:0;height:90px;display:flex;justify-content: space-evenly; align-items:center;padding:0 var.$maingap;border-bottom:1px solid #cdd1d5;z-index:100; 
+
+.wrap{display:flex;flex-direction:column;min-width:var.$mainwidth;height:100vh;font-size:13px;
+  &:has(.header.abnormal){
+    .header{background-color:var.$orange;@include mixin.blink(hbg, var.$abnormal);}
+    img{
+      &:not(.abnormal_logo){display:none;}
+      &.abnormal_logo{display:inline-block;}
+    }
+    .cont_body{border-color:var.$abnormal;background-color:#fff6f6;@include mixin.blink(cbg, #fddddd);}
+  }
 }
-.time_banner{width:350px;background-color:var.$skyblue;color:#fff;font-size:30px;font-weight:600;line-height:45px;border-radius:15px;text-align:left;padding-left:23px;
-  &.abnormal{background-color:var.$orange;}
+.header{position:relative;flex-shrink:0;border-bottom:1px solid #cdd1d5;z-index:100;
+  .top_wrap{display:flex;justify-content:space-between;align-items:center;width:var.$mainwidth;height:90px;margin:0 auto;padding:var.$maingap;}
+  .abnormal_logo{display:none;}
+}
+.time_banner{width:350px;font-size:30px;font-weight:600;line-height:45px;border-radius:15px;text-align:left;padding-left:23px;background-color:#fff;
 }
 .profile .account{@include mixin.flex;gap:5px;color:#464c53;
   &::before{@include mixin.icobtn($y:-101px,$w:32px);content:"";margin-right:7px;}
@@ -128,7 +139,7 @@ $navH:193px;
 }
 .flex_vertical_wrap{@include mixin.flex($align:stretch,$direction:column){gap:var.$sectiongap;}}
 .main_container{flex:1;}
-.cont_body{width:var.$mainwidth;margin:0 auto;padding:var.$maingap+30 var.$maingap;
+.cont_body{width:var.$mainwidth;margin:15px auto;border:3px solid transparent;border-radius:10px;padding:var.$maingap + 10 var.$maingap;
   & > .flex_wrap{position:relative;gap:var.$sectiongap;}
   & > .tit{margin-bottom:70px;
     h1{@include mixin.flex;gap:18px;font-size:30px;color:#000;letter-spacing:-.02em;}
@@ -189,7 +200,7 @@ $defaultTblH:453px;
     &:has(.switch_pw){position:relative;}
   }
 }
-.tbl_bot{border-bottom:1px solid var.$greyish;padding:20px 50px;}
+.tbl_bot{border-bottom:1px solid var.$greyish;padding:20px 50px;background-color:#fff;}
 .tbl_count{display:grid;grid-template-columns: repeat(auto-fit, minmax(40px, auto));line-height:20px;font-size:14px;font-weight:500;
   strong{font-size:15px;font-weight:700;}
   dt{@include mixin.flex;gap:7px;    
@@ -227,7 +238,7 @@ $defaultTblH:453px;
 //tab
 .tabs{border-bottom:2px solid var.$blue;
   ul{display:flex;gap:4px;
-    li{min-width:70px;border:1px solid var.$border;border-bottom-width:0; border-radius:4px 4px 0 0;}
+    li{min-width:70px;border:1px solid var.$border;border-bottom-width:0; border-radius:4px 4px 0 0;background-color:#fff;}
     a{display:block;text-align:center;padding:3px 5px;color:#55606e;}
     .on{background-color:var.$blue;border-color:transparent;
       a{color:#fff;font-weight:700;}
@@ -266,7 +277,7 @@ $defaultTblH:453px;
   .bc_stt_desc{flex:1;}
   & > .flex_wrap{gap:70px;}
 }
-.bc_stt_item{position:relative;flex:1;border-radius:18px;border:1px solid #c1c8d1;
+.bc_stt_item{position:relative;flex:1;border-radius:18px;border:1px solid #c1c8d1;background-color:#fff;
   &:not(:last-of-type)::after{@include mixin.shape(13px,19px);position: absolute;right:-23%;top:30px;transform:translateY(-50%);background:url(../images/bullet.png) 0 0 no-repeat;}
   & > strong{display:flex;align-items:center;gap:10px;background-color:#586779;color:#fff;padding:10px;font-size:18px;font-weight:600;letter-spacing:-.9px;border-radius:14px 14px 0 0;white-space:nowrap;
     &::before{@include mixin.shape(39px,39px);background:url(../images/ico.png) 4px 4px no-repeat, #fff;border-radius:12px;}
@@ -293,7 +304,7 @@ $defaultTblH:453px;
   }
   .bc_schdl_fax .tbl_wrap{height:704px;}
 }
-.bc_stt_desc{border:2px solid var.$blue;border-radius:10px;padding:25px;margin-top:24px;
+.bc_stt_desc{border:2px solid var.$blue;border-radius:10px;padding:25px;margin-top:24px;background-color:#fff;
   & > div:not(:first-of-type){margin-top:25px;}
   .tab_container{padding:29px 10px;}
   textarea{height:235px;border-width:0;}

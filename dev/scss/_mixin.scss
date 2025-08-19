@@ -99,3 +99,9 @@ border:1px solid transparent;}
 @mixin box($borderColor:var.$greyish,$bgColor:transparent){
   border:1px solid $borderColor;border-radius:3px;background-color:$bgColor;padding:25px;
 }
+@mixin blink($aniName, $color) {
+  animation: $aniName 1s step-start infinite;
+  @keyframes #{$aniName} {
+    50% { background-color: $color; }
+  }
+}
