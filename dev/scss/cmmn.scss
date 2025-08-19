@@ -90,6 +90,7 @@
       &:not(.abnormal_logo){display:none;}
       &.abnormal_logo{display:inline-block;}
     }
+    .profile :is(.account, b, button){color:#fff;}
     .cont_body{border-color:var.$abnormal;background-color:#fff6f6;@include mixin.blink(cbg, #fddddd);}
   }
 }
