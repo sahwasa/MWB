@@ -2,7 +2,8 @@
 - bc_stt.html      : 방송상태
 - branch_mng.html  : 지점관리
 - day_bc_jrnl.html : 일별 방송일지
-- login.html       : 로그인
+- login_fax.html   : 해양기상방송시스템 로그인
+- login_voc.html   : 음성기상방송시스템 로그인
 - msg_rcv_stt.html : 전문수신현황
 - prd_bc_agg.html  : 기간별방송집계
 - schdl_mng.html   : 시간표관리
