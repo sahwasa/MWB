@@ -1,21 +1,21 @@
 @@include('../inc/top.html')
-<div id="wrap" class="wrap">
-  <div class="visual_login">
-    <img src="../images/loing_bg.png" width="100%" height="100%" alt="배경이미지">
-  </div>  
-  <main id="content" class="login">
+<div id="wrap" class="wrap">   
+  <main id="content" class="login fax">
     <header>
         <!-- <h1 class="main_logo"><img src="../images/logo_voice_weather.png" alt="기상청 기상통신소-음성기상방송시스템"></h1> -->
-      <h1 class="main_logo"><img src="../images/logo_wireless_fax.png" alt="기상청 기상통신소-무선FAX기상방송시스템"></h1>
+      <h1 class="main_logo"><img src="../images/logo_login_wirelessFax.png" alt="기상청 기상통신소-해양기상방송시스템">
+      </h1>      
+      <a href="login_voc.html" class="btn_sysmove">음성기상방송시스템으로 이동</a>
     </header>
     <div class="login_ipt">
       <input type="text" name="" title="아이디" placeholder="아이디">
       <input type="password" name="" title="비밀번호" placeholder="비밀번호">
       <label for="remember"><input type="checkbox" id="remember">ID 기억하기</label>
-      <a href="./html/voc_motr.html" class="btn_login">로그인</a>
+      <a href="./voc_motr.html" class="btn_login">로그인</a>
+      <a href="./voc_motr.html" class="btn_not_login">로그인없이 입장</a>
     </div>
-    @@include('../inc/footer.html')
   </main>
+  @@include('../inc/footer.html')
 </div>
 @@include('../inc/script.html')
 </body>
