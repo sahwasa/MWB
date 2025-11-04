@@ -104,7 +104,7 @@
             </div>
           </header>
           <div class="tbl_wrap">
-            <!-- //done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,unbc:미방송,bc_cncl:방송취소,delay:지연,normal:정상 -->
+            <!-- ////done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,bc_error:방송오류,bc_cncl:방송취소,delay:지연,normal:정상,prrt_msg:우선전문,gnrl_msg:일반전문,used:사용중,unused:사용안함,bc_await:방송대기,bc_ready:방송준비,bc_onair:방송중 -->
             <table class="tbl_default">
               <caption>방송 시간표</caption>
               <colgroup>
@@ -130,16 +130,7 @@
                   <td>07:37</td>
                   <td>07:37</td>
                   <td>중기해상예보</td>
-                  <td><i class="stt done">방송완료</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_crt">방송원고생성</i></td>
+                  <td><i class="stt bc_await">방송대기</i></td>
                   <td><button type="button" class="btn_steelblue_line">전문</button></td>
                   <td><button type="button" class="btn_mutepurple_line">원고</button></td>
                 </tr>
@@ -151,13 +142,49 @@
                   <td><i class="stt doc_rcv">전문수신(08:50)</i></td>
                   <td><button type="button" class="btn_steelblue_line">전문</button></td>
                   <td>&nbsp;</td>
-                </tr>
+                </tr> 
                 <tr>
                   <td>1</td>
                   <td>07:37</td>
                   <td>07:37</td>
                   <td>해상예보</td>
                   <td><i class="stt doc_delay">전문 지연</i></td>
+                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
+                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>07:37</td>
+                  <td>07:37</td>
+                  <td>해상예보</td>
+                  <td><i class="stt bc_ready">방송준비</i></td>
+                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
+                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>07:37</td>
+                  <td>07:37</td>
+                  <td>해상예보</td>
+                  <td><i class="stt doc_crt">원고생성</i></td>
+                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
+                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>07:37</td>
+                  <td>07:37</td>
+                  <td>해상예보</td>
+                  <td><i class="stt bc_fail">방송실패</i></td>
+                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
+                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>07:37</td>
+                  <td>07:37</td>
+                  <td>해상예보</td>
+                  <td><i class="stt bc_onair">방송중</i></td>
                   <td><button type="button" class="btn_steelblue_line">전문</button></td>
                   <td><button type="button" class="btn_mutepurple_line">원고</button></td>
                 </tr>
@@ -174,26 +201,8 @@
                   <td>1</td>
                   <td>07:37</td>
                   <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_crt">방송원고생성</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_rcv">전문수신(08:50)</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_delay">전문 지연</i></td>
+                  <td>중기해상예보</td>
+                  <td><i class="stt bc_error">방송오류</i></td>
                   <td><button type="button" class="btn_steelblue_line">전문</button></td>
                   <td><button type="button" class="btn_mutepurple_line">원고</button></td>
                 </tr>
@@ -202,109 +211,10 @@
                   <td>07:37</td>
                   <td>07:37</td>
                   <td>중기해상예보</td>
-                  <td><i class="stt done">방송완료</i></td>
+                  <td><i class="stt bc_cncl">방송취소</i></td>
                   <td><button type="button" class="btn_steelblue_line">전문</button></td>
                   <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_crt">방송원고생성</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_rcv">전문수신(08:50)</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_delay">전문 지연</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>중기해상예보</td>
-                  <td><i class="stt done">방송완료</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_crt">방송원고생성</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_rcv">전문수신(08:50)</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_delay">전문 지연</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>중기해상예보</td>
-                  <td><i class="stt done">방송완료</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_crt">방송원고생성</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_rcv">전문수신(08:50)</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>07:37</td>
-                  <td>07:37</td>
-                  <td>해상예보</td>
-                  <td><i class="stt doc_delay">전문 지연</i></td>
-                  <td><button type="button" class="btn_steelblue_line">전문</button></td>
-                  <td><button type="button" class="btn_mutepurple_line">원고</button></td>
-                </tr>
+                </tr>                         
               </tbody>
             </table>
           </div>

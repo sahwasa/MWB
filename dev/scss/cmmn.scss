@@ -150,8 +150,8 @@ $navH:193px;
 .section_bot{@include mixin.flex;margin-top:var.$maingap;
   &.line_t{border-top:1px solid var.$blue;padding-top:var.$maingap;}
 }
-//done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,unbc:미방송,bc_cncl:방송취소,delay:지연,normal:정상,prrt_msg:우선전문,gnrl_msg:일반전문,used:사용중,unused:사용안함
-$_stt:done,doc_crt,doc_delay,doc_rcv,normal,delay,bc_cncl,unbc,prrt_msg,gnrl_msg,used,unused;
+//done:방송완료,doc_crt:원고생성,doc_delay,:전문지연,doc_rcv:전문수신,bc_error:방송오류,bc_cncl:방송취소,delay:지연,normal:정상,prrt_msg:우선전문,gnrl_msg:일반전문,used:사용중,unused:사용안함,bc_await:방송대기,bc_ready:방송준비,bc_onair:방송중
+$_stt:done,bc_onair,doc_delay,doc_rcv,normal,delay,bc_cncl,bc_error,prrt_msg,gnrl_msg,used,unused,bc_await,bc_ready,doc_crt,bc_fail;
 .stt{@include mixin.flex;gap:7px;font-weight:normal;color:var.$black;
   &::before{@include mixin.shape(20px,20px);background:url(../images/ico_stt.png) 0 0 no-repeat;}
   @each $item in $_stt{
